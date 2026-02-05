@@ -77,7 +77,35 @@ The model applies "attention weights" to the relationships so that it learns the
 This is called **self-attention**. The term originates from the fact that each word in the prompt attends to other words in the same prompt, including itself. This mechanism is what enables Transformers to capture relationships and dependencies between words regardless of their distance from each other in the prompt.
 
 #### Computation
+✅ What you MUST know (important)
 
+You should be able to explain in words:
+
+What is being computed
+
+Query compares with all Keys
+
+Scores → softmax → weights
+
+Weighted sum of Values
+
+Why each step exists
+
+Dot product → similarity
+
+Softmax → importance distribution
+
+Weighted sum → context-aware embedding
+
+Why √dₖ scaling is used
+
+Prevents large values
+
+Stabilizes training
+
+Final output meaning
+
+Each word gets a new vector influenced by other words
 This self-attention is computed as follows for each word $t$ in the prompt:
 
 $$
